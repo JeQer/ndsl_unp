@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/EchoServerEpoll.dir/src/MyEpoll.c.o CMakeFiles/EchoServerEpoll.dir/src/EchoServer.c.o  -o EchoServerEpoll -lunp 

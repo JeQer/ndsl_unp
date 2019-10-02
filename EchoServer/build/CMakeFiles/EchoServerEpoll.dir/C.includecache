@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/config.h
+unp.h
+../include/unp.h
+myepoll.h
+../include/myepoll.h
+
+../include/myepoll.h
+fcntl.h
+-
+errno.h
+-
+sys/epoll.h
+-
+unistd.h
+-
+stdio.h
+-
+stdlib.h
+-
+
+/home/zbq/SOCKET/EchoServer/src/EchoServer.c
+config.h
+/home/zbq/SOCKET/EchoServer/src/config.h
+
+/home/zbq/SOCKET/EchoServer/src/MyEpoll.c
+myepoll.h
+/home/zbq/SOCKET/EchoServer/src/myepoll.h
+
