@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/zbq/SOCKET/EchoServer/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -109,6 +109,32 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named EchoServerSelect
+
+# Build rule for target.
+EchoServerSelect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 EchoServerSelect
+.PHONY : EchoServerSelect
+
+# fast build rule for target.
+EchoServerSelect/fast:
+	$(MAKE) -f CMakeFiles/EchoServerSelect.dir/build.make CMakeFiles/EchoServerSelect.dir/build
+.PHONY : EchoServerSelect/fast
+
+#=============================================================================
+# Target rules for targets named EchoServerFork
+
+# Build rule for target.
+EchoServerFork: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 EchoServerFork
+.PHONY : EchoServerFork
+
+# fast build rule for target.
+EchoServerFork/fast:
+	$(MAKE) -f CMakeFiles/EchoServerFork.dir/build.make CMakeFiles/EchoServerFork.dir/build
+.PHONY : EchoServerFork/fast
 
 #=============================================================================
 # Target rules for targets named EchoServerEpoll
@@ -163,6 +189,33 @@ src/EchoServer.c.s:
 	$(MAKE) -f CMakeFiles/EchoServerEpoll.dir/build.make CMakeFiles/EchoServerEpoll.dir/src/EchoServer.c.s
 .PHONY : src/EchoServer.c.s
 
+src/EchoServerFork.o: src/EchoServerFork.c.o
+
+.PHONY : src/EchoServerFork.o
+
+# target to build an object file
+src/EchoServerFork.c.o:
+	$(MAKE) -f CMakeFiles/EchoServerFork.dir/build.make CMakeFiles/EchoServerFork.dir/src/EchoServerFork.c.o
+.PHONY : src/EchoServerFork.c.o
+
+src/EchoServerFork.i: src/EchoServerFork.c.i
+
+.PHONY : src/EchoServerFork.i
+
+# target to preprocess a source file
+src/EchoServerFork.c.i:
+	$(MAKE) -f CMakeFiles/EchoServerFork.dir/build.make CMakeFiles/EchoServerFork.dir/src/EchoServerFork.c.i
+.PHONY : src/EchoServerFork.c.i
+
+src/EchoServerFork.s: src/EchoServerFork.c.s
+
+.PHONY : src/EchoServerFork.s
+
+# target to generate assembly for a file
+src/EchoServerFork.c.s:
+	$(MAKE) -f CMakeFiles/EchoServerFork.dir/build.make CMakeFiles/EchoServerFork.dir/src/EchoServerFork.c.s
+.PHONY : src/EchoServerFork.c.s
+
 src/EchoServerNonBlock.o: src/EchoServerNonBlock.c.o
 
 .PHONY : src/EchoServerNonBlock.o
@@ -189,6 +242,33 @@ src/EchoServerNonBlock.s: src/EchoServerNonBlock.c.s
 src/EchoServerNonBlock.c.s:
 	$(MAKE) -f CMakeFiles/EchoServerEpollNonBlock.dir/build.make CMakeFiles/EchoServerEpollNonBlock.dir/src/EchoServerNonBlock.c.s
 .PHONY : src/EchoServerNonBlock.c.s
+
+src/EchoServerSelect.o: src/EchoServerSelect.c.o
+
+.PHONY : src/EchoServerSelect.o
+
+# target to build an object file
+src/EchoServerSelect.c.o:
+	$(MAKE) -f CMakeFiles/EchoServerSelect.dir/build.make CMakeFiles/EchoServerSelect.dir/src/EchoServerSelect.c.o
+.PHONY : src/EchoServerSelect.c.o
+
+src/EchoServerSelect.i: src/EchoServerSelect.c.i
+
+.PHONY : src/EchoServerSelect.i
+
+# target to preprocess a source file
+src/EchoServerSelect.c.i:
+	$(MAKE) -f CMakeFiles/EchoServerSelect.dir/build.make CMakeFiles/EchoServerSelect.dir/src/EchoServerSelect.c.i
+.PHONY : src/EchoServerSelect.c.i
+
+src/EchoServerSelect.s: src/EchoServerSelect.c.s
+
+.PHONY : src/EchoServerSelect.s
+
+# target to generate assembly for a file
+src/EchoServerSelect.c.s:
+	$(MAKE) -f CMakeFiles/EchoServerSelect.dir/build.make CMakeFiles/EchoServerSelect.dir/src/EchoServerSelect.c.s
+.PHONY : src/EchoServerSelect.c.s
 
 src/MyEpoll.o: src/MyEpoll.c.o
 
@@ -226,16 +306,24 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... EchoServerSelect"
+	@echo "... EchoServerFork"
 	@echo "... EchoServerEpoll"
 	@echo "... EchoServerEpollNonBlock"
 	@echo "... src/EchoServer.o"
 	@echo "... src/EchoServer.i"
 	@echo "... src/EchoServer.s"
+	@echo "... src/EchoServerFork.o"
+	@echo "... src/EchoServerFork.i"
+	@echo "... src/EchoServerFork.s"
 	@echo "... src/EchoServerNonBlock.o"
 	@echo "... src/EchoServerNonBlock.i"
 	@echo "... src/EchoServerNonBlock.s"
+	@echo "... src/EchoServerSelect.o"
+	@echo "... src/EchoServerSelect.i"
+	@echo "... src/EchoServerSelect.s"
 	@echo "... src/MyEpoll.o"
 	@echo "... src/MyEpoll.i"
 	@echo "... src/MyEpoll.s"

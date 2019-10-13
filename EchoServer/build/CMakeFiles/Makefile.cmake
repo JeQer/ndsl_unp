@@ -114,6 +114,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/EchoServerSelect.dir/DependInfo.cmake"
+  "CMakeFiles/EchoServerFork.dir/DependInfo.cmake"
   "CMakeFiles/EchoServerEpoll.dir/DependInfo.cmake"
   "CMakeFiles/EchoServerEpollNonBlock.dir/DependInfo.cmake"
   )

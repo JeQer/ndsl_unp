@@ -1,4 +1,6 @@
-/home/zbq/SOCKET/EchoServer/build/CMakeFiles/rebuild_cache.dir
 /home/zbq/SOCKET/EchoServer/build/CMakeFiles/edit_cache.dir
+/home/zbq/SOCKET/EchoServer/build/CMakeFiles/rebuild_cache.dir
+/home/zbq/SOCKET/EchoServer/build/CMakeFiles/EchoServerSelect.dir
+/home/zbq/SOCKET/EchoServer/build/CMakeFiles/EchoServerFork.dir
 /home/zbq/SOCKET/EchoServer/build/CMakeFiles/EchoServerEpoll.dir
 /home/zbq/SOCKET/EchoServer/build/CMakeFiles/EchoServerEpollNonBlock.dir

@@ -1,1 +1,1 @@
-/usr/bin/cc   -rdynamic CMakeFiles/EchoServerEpollNonBlock.dir/src/MyEpoll.c.o CMakeFiles/EchoServerEpollNonBlock.dir/src/EchoServerNonBlock.c.o  -o EchoServerEpollNonBlock -lunp 
+/usr/bin/cc -g  -rdynamic CMakeFiles/EchoServerEpollNonBlock.dir/src/MyEpoll.c.o CMakeFiles/EchoServerEpollNonBlock.dir/src/EchoServerNonBlock.c.o  -o EchoServerEpollNonBlock -lunp 

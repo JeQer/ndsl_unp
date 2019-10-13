@@ -60,6 +60,80 @@ CMAKE_SOURCE_DIR = /home/zbq/SOCKET/EchoServer
 CMAKE_BINARY_DIR = /home/zbq/SOCKET/EchoServer/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/EchoServerSelect.dir
+
+# All Build rule for target.
+CMakeFiles/EchoServerSelect.dir/all:
+	$(MAKE) -f CMakeFiles/EchoServerSelect.dir/build.make CMakeFiles/EchoServerSelect.dir/depend
+	$(MAKE) -f CMakeFiles/EchoServerSelect.dir/build.make CMakeFiles/EchoServerSelect.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zbq/SOCKET/EchoServer/build/CMakeFiles --progress-num=9,10 "Built target EchoServerSelect"
+.PHONY : CMakeFiles/EchoServerSelect.dir/all
+
+# Include target in all.
+all: CMakeFiles/EchoServerSelect.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/EchoServerSelect.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zbq/SOCKET/EchoServer/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/EchoServerSelect.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zbq/SOCKET/EchoServer/build/CMakeFiles 0
+.PHONY : CMakeFiles/EchoServerSelect.dir/rule
+
+# Convenience name for target.
+EchoServerSelect: CMakeFiles/EchoServerSelect.dir/rule
+
+.PHONY : EchoServerSelect
+
+# clean rule for target.
+CMakeFiles/EchoServerSelect.dir/clean:
+	$(MAKE) -f CMakeFiles/EchoServerSelect.dir/build.make CMakeFiles/EchoServerSelect.dir/clean
+.PHONY : CMakeFiles/EchoServerSelect.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/EchoServerSelect.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/EchoServerFork.dir
+
+# All Build rule for target.
+CMakeFiles/EchoServerFork.dir/all:
+	$(MAKE) -f CMakeFiles/EchoServerFork.dir/build.make CMakeFiles/EchoServerFork.dir/depend
+	$(MAKE) -f CMakeFiles/EchoServerFork.dir/build.make CMakeFiles/EchoServerFork.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zbq/SOCKET/EchoServer/build/CMakeFiles --progress-num=7,8 "Built target EchoServerFork"
+.PHONY : CMakeFiles/EchoServerFork.dir/all
+
+# Include target in all.
+all: CMakeFiles/EchoServerFork.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/EchoServerFork.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zbq/SOCKET/EchoServer/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/EchoServerFork.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zbq/SOCKET/EchoServer/build/CMakeFiles 0
+.PHONY : CMakeFiles/EchoServerFork.dir/rule
+
+# Convenience name for target.
+EchoServerFork: CMakeFiles/EchoServerFork.dir/rule
+
+.PHONY : EchoServerFork
+
+# clean rule for target.
+CMakeFiles/EchoServerFork.dir/clean:
+	$(MAKE) -f CMakeFiles/EchoServerFork.dir/build.make CMakeFiles/EchoServerFork.dir/clean
+.PHONY : CMakeFiles/EchoServerFork.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/EchoServerFork.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/EchoServerEpoll.dir
 
 # All Build rule for target.

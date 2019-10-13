@@ -6,8 +6,11 @@ int main(int argc, char* argv[])
     struct sockaddr_in slCliAddr;
     socklen_t slCliAddrLen;
     struct epoll_event slEvents[MAX_EPOLL_EVENTS_SIZE];
-    
-    iListenfd = TcpIpv4ServerInit(9999);
+   
+    if (argc != 2) {
+      printf("Usage:./EchoServerEpoll port\n");
+    }
+    iListenfd = TcpIpv4ServerInit((uint16_t)atoi(argv[1]));
     iEpfd = Epoll_create(MAX_EPOLL_EVENTS_SIZE);
     Epoll_ctl_add_fd(iEpfd, iListenfd, EPOLLIN);
     for (;;) {

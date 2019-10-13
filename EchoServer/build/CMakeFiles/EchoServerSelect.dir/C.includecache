@@ -28,11 +28,7 @@ stdio.h
 stdlib.h
 -
 
-/home/zbq/SOCKET/EchoServer/src/EchoServer.c
+/home/zbq/SOCKET/EchoServer/src/EchoServerSelect.c
 config.h
 /home/zbq/SOCKET/EchoServer/src/config.h
-
-/home/zbq/SOCKET/EchoServer/src/MyEpoll.c
-myepoll.h
-/home/zbq/SOCKET/EchoServer/src/myepoll.h
 

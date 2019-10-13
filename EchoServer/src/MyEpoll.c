@@ -38,6 +38,7 @@ void Epoll_ctl_add_fd(int epfd, int fd, uint32_t op)
 	event.events = op;
 	Epoll_ctl(epfd, EPOLL_CTL_ADD, fd, &event);
 }
+
 void Epoll_ctl_mod_fd(int epfd, int fd, uint32_t op)
 {
   struct epoll_event event;
